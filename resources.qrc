@@ -1,9 +1,8 @@
 <RCC>
     <qresource prefix="/">
-	<file>drm.ico</file>
         <file>AUTHORS</file>
         <file>COPYING</file>
-	<file>drm.ico</file>
+	<file>qt-ft8.ico</file>
         <file>res/Adaptic.qss</file>
         <file>res/Combinear.qss</file>
 	<file>res/sw-bandplan.xml</file>

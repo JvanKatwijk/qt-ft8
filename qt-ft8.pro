@@ -17,7 +17,7 @@ QMAKE_LFLAGS	+= -flto
 #QMAKE_CXXFLAGS	+= -fsanitize=address
 #QMAKE_CFLAGS	+= -fsanitize=address
 #QMAKE_LFLAGS	+= -fsanitize=address
-RC_ICONS	=  drm.ico
+RC_ICONS	=  qt-ft8.ico
 RESOURCES       += resources.qrc
 
 DEPENDPATH += .  \
