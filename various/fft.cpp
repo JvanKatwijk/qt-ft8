@@ -1,6 +1,6 @@
 /*
  *
- *    Copyright (C) 2014 .. 2025
+ *    Copyright (C) 20125
  *    Jan van Katwijk (J.vanKatwijk@gmail.com)
  *    Lazy Chair Computing
  *
@@ -24,7 +24,6 @@
 #include	<cstring>
 /*
  */
-
 	fft_handler:: fft_handler (int32_t fft_size) {
 	this	-> fftSize = fft_size;
 

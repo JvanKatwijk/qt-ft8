@@ -22,6 +22,7 @@
  */
 
 #pragma once
+
 #include	"radio-constants.h"
 #include	<QObject>
 #include	<QFrame>

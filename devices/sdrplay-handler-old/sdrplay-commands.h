@@ -1,22 +1,22 @@
 #
 /*
- *    Copyright (C) 2020
+ *    Copyright (C) 2025
  *    Jan van Katwijk (J.vanKatwijk@gmail.com)
  *    Lazy Chair Computing
  *
- *    This file is part of the drm receiver
+ *    This file is part of the qt-ft8 decoder
  *
- *    Qt-Dab is free software; you can redistribute it and/or modify
+ *    qt-ft8 decoder is free software; you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation version 2 of the License.
  *
- *    Qt-Dab is distributed in the hope that it will be useful,
+ *    qt-ft8 decoder is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *    GNU General Public License for more details.
  *
  *    You should have received a copy of the GNU General Public License
- *    along with Qt-Dab if not, write to the Free Software
+ *    along with qt-ft8 decoder if not, write to the Free Software
  *    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
@@ -25,8 +25,7 @@
 //
 //	The file contains the definitions of the interface data between
 //	the calling and the callee thread
-#ifndef	__SDRPLAY_COMMANDS__
-#define	__SDRPLAY_COMMANDS__
+#pragma once
 #define RESTART_REQUEST         0100
 #define STOP_REQUEST            0101
 #define SETFREQUENCY_REQUEST	0102
@@ -155,5 +154,4 @@ public:
 	~antennaRequest	() {}
 };
 
-#endif
 

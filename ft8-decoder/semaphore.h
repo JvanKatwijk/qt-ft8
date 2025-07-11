@@ -4,7 +4,7 @@
  *    Jan van Katwijk (J.vanKatwijk@gmail.com)
  *    Lazy Chair Computing
  *
- *    This file is part of swradio
+ *    This file is part of the qt-ft8 decoder
  *
  *    qt-ft8 decoder is free software; you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by

@@ -1,28 +1,27 @@
 #
 /*
- *    Copyright (C) 2017 .. 2018
+ *    Copyright (C) 2025
  *    Jan van Katwijk (J.vanKatwijk@gmail.com)
  *    Lazy Chair Computing
  *
- *    This file is part of the drm-receiver
+ *    This file is part of the qt-ft8 decoder
  *
- *    drm-receiver is free software; you can redistribute it and/or modify
+ *    qt-ft8 decoder is free software; you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation; either version 2 of the License, or
  *    (at your option) any later version.
  *
- *    drm-receiver is distributed in the hope that it will be useful,
+ *    qt-ft8 decoder is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *    GNU General Public License for more details.
  *
  *    You should have received a copy of the GNU General Public License
- *    along with drm-receiver; if not, write to the Free Software
+ *    along with qt-ft8 decoder; if not, write to the Free Software
  *    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __HACKRF_HANDLER__
-#define	__HACKRF_HANDLER__
+#pragma once
 
 #include	<QObject>
 #include	<QFrame>
@@ -53,7 +52,7 @@ typedef	int	(*pfn_hackrf_exit)	();
 typedef	int	(*pfn_hackrf_start_rx)	(hackrf_device *,
 	                                 hackrf_sample_block_cd_fn, void *);
 typedef	int	(*pfn_hackrf_stop_rx)	(hackrf_device *);
-typedef	hackrf_device_list_t	*(*pfn_hackrf_device_list)	(void);
+typedef	hackrf_device_list_t	*(*pfn_hackrf_device_list)	();
 typedef	int	(*pfn_hackrf_set_baseband_filter_bandwidth) (hackrf_device *,
 	                                 const uint32_t bandwidth_hz);
 typedef	int	(*pfn_hackrf_set_lna_gain) (hackrf_device *, uint32_t);
@@ -98,7 +97,7 @@ public:
 private:
 	QFrame		myFrame;
 
-	bool			load_hackrfFunctions	(void);
+	bool			load_hackrfFunctions	();
 	pfn_hackrf_init		hackrf_init;
 	pfn_hackrf_open		hackrf_open;
 	pfn_hackrf_close	hackrf_close;
@@ -126,5 +125,4 @@ private slots:
 	void		setLNAGain	(int);
 	void		setVGAGain	(int);
 };
-#endif
 

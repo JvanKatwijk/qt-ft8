@@ -1,7 +1,7 @@
 #
 /*
- *    Copyright (C) 2022
- *    J van Katwijk
+ *    Copyright (C) 2025
+ *    Jan van Katwijk (J.vanKatwijk@gmail.com)
  *    Lazy Chair Computing
  *
  *    Parts of the algorithms are copied or derived from

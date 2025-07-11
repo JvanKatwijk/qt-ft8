@@ -1,32 +1,28 @@
 #
 /*
- *    Copyright (C) 2011, 2012, 2013
+ *    Copyright (C) 2025
  *    Jan van Katwijk (J.vanKatwijk@gmail.com)
- *    Lazy Chair Programming
+ *    Lazy Chair Computing
  *
- *    This file is part of the SDR-J (JSDR).
- *    Many of the ideas as implemented in JSDR are derived from
- *    other work, made available through the GNU general Public License. 
- *    All copyrights of the original authors are recognized.
+ *    This file is part of the qt-ft8 decoder
  *
- *    SDR-J is free software; you can redistribute it and/or modify
+ *    qt-ft8 decoder is free software; you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation; either version 2 of the License, or
  *    (at your option) any later version.
  *
- *    SDR-J is distributed in the hope that it will be useful,
+ *    qt-ft8 decoder is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *    GNU General Public License for more details.
  *
  *    You should have received a copy of the GNU General Public License
- *    along with SDR-J; if not, write to the Free Software
+ *    along with qt-ft8 decoder; if not, write to the Free Software
  *    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
 #
-#ifndef	__DONGLE_SELECT__
-#define	__DONGLE_SELECT__
+#pragma once
 #
 #include	<QDialog>
 #include	<QLabel>
@@ -38,10 +34,10 @@
 class	dongleSelect: public QDialog {
 Q_OBJECT
 public:
-	dongleSelect	(void);
-	~dongleSelect	(void);
+	dongleSelect	();
+	~dongleSelect	();
 void	addtoDongleList	(const char *);
-int16_t	getSelectedItem	(void);
+int16_t	getSelectedItem	();
 private:
 	QLabel		*toptext;
 	QListView	*selectorDisplay;
@@ -52,5 +48,4 @@ private slots:
 void	selectDongle	(QModelIndex);
 };
 
-#endif
 

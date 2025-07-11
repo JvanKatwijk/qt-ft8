@@ -1,28 +1,27 @@
 #
 /*
- *    Copyright (C) 2020
+ *    Copyright (C) 2025
  *    Jan van Katwijk (J.vanKatwijk@gmail.com)
  *    Lazy Chair Computing
  *
- *    This file is part of the drm receiver
+ *    This file is part of the qt-ft8 decoder
  *
- *    drm receiver is free software; you can redistribute it and/or modify
+ *    qt-ft8 decoder is free software; you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation; either version 2 of the License, or
  *    (at your option) any later version.
  *
- *    drm receiver is distributed in the hope that it will be useful,
+ *    qt-ft8 decoder is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *    GNU General Public License for more details.
  *
  *    You should have received a copy of the GNU General Public License
- *    along with drm receiver; if not, write to the Free Software
+ *    along with qt-ft8 decoder; if not, write to the Free Software
  *    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __RTLSDR_HANDLER__
-#define	__RTLSDR_HANDLER__
+#pragma once
 
 #include	<QThread>
 #include	<QObject>
@@ -64,7 +63,7 @@ typedef RTLSDR_API 	int (*  pfnrtlsdr_read_async) (rtlsdr_dev_t *,
 	                               uint32_t);
 typedef RTLSDR_API	int (*  pfnrtlsdr_cancel_async) (rtlsdr_dev_t *);
 typedef RTLSDR_API	int (*  pfnrtlsdr_set_direct_sampling) (rtlsdr_dev_t *, int);
-typedef RTLSDR_API	uint32_t (*  pfnrtlsdr_get_device_count) (void);
+typedef RTLSDR_API	uint32_t (*  pfnrtlsdr_get_device_count) ();
 typedef RTLSDR_API 	int (* pfnrtlsdr_set_freq_correction)(rtlsdr_dev_t *, int);
 
 
@@ -72,13 +71,12 @@ typedef RTLSDR_API 	int (* pfnrtlsdr_set_freq_correction)(rtlsdr_dev_t *, int);
 
 class	dll_driver : public QThread {
 public:
-	dll_driver (rtlsdrHandler *d);
-	~dll_driver (void);
+		dll_driver (rtlsdrHandler *d);
+		~dll_driver ();
 //	For the callback, we do need some environment 
 //	This is the user-side call back function
 static
 void	RTLSDRCallBack (unsigned char *buf, uint32_t len, void *ctx);
-
 private:
 virtual void	run ();
 	rtlsdrHandler	*theStick;
@@ -148,5 +146,4 @@ private:
 	pfnrtlsdr_get_device_count rtlsdr_get_device_count;
 	pfnrtlsdr_set_freq_correction rtlsdr_set_freq_correction;
 };
-#endif
 
