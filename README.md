@@ -84,6 +84,13 @@ While the Windows installer provides support for the DABsticks and
 the HACKrf devices, the AppImage does not. One needs to install
 driver software first.
 
+A recent addition is the client for the spyserver. Since my antenna equipment
+is limited, I - from time to time - connect to a - relatively nearby - 
+spyServer, one that supports the AIRspyHF.
+
+The client asks for a datastream of 96000 8bit IQ samples, that works
+well, as the picture on top shows.
+
 Tuning and presets
 ====================================================================
 
